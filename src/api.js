@@ -2,13 +2,6 @@ import { mockData } from './mock-data';
 import axios from 'axios';
 import NProgress from 'nprogress';
 
-// This function takes an events array, then uses map to create a new array with only locations.
-export const extractLocations = (events) => {
-  var extractLocations = events.map((event) => event.location);
-  var locations = [...new Set(extractLocations)];
-  return locations;
-};
-
 export const getAccessToken = async () => {
   const accessToken = localStorage.getItem('access_token');
   const tokenCheck = accessToken && (await checkToken(accessToken));
@@ -29,12 +22,12 @@ export const getAccessToken = async () => {
   return accessToken;
 }
 
-const checkToken = async (accessToken) => {
+export const checkToken = async (accessToken) => {
   const result = await fetch(
     `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
   )
     .then((res) => res.json())
-    .catch((error) => error.json());
+    .catch((error) => error);
 
   return result;
 };
@@ -42,17 +35,14 @@ const checkToken = async (accessToken) => {
 export const getEvents = async () => {
   NProgress.start();
 
-  if (window.location.href.startsWith("http://localhost")) {
+  if (window.location.href.startsWith('http://localhost')) {
     NProgress.done();
     return mockData;
   }
 
-
-  const token = await getAccessToken();
-
   if (token) {
     removeQuery();
-    const url = 'https://4v4gfj7cpj.execute-api.eu-central-1.amazonaws.com/dev/api/get-events/' + '/' + token;
+    const url = 'https://4v4gfj7cpj.execute-api.eu-central-1.amazonaws.com/dev/api/get-events' + '/' + token;
     const result = await axios.get(url);
     if (result.data) {
       var locations = extractLocations(result.data.events);
@@ -78,7 +68,7 @@ const removeQuery = () => {
   }
 };
 
-const getToken = async (code) => {
+export const getToken = async (code) => {
   const encodeCode = encodeURIComponent(code);
   const { access_token } = await fetch(
     'https://4v4gfj7cpj.execute-api.eu-central-1.amazonaws.com/dev/api/token' + '/' + encodeCode
@@ -91,4 +81,10 @@ const getToken = async (code) => {
   access_token && localStorage.setItem("access_token", access_token);
 
   return access_token;
+};
+
+export const extractLocations = (events) => {
+  var extractLocations = events.map((event) => event.location);
+  var locations = [...new Set(extractLocations)];
+  return locations;
 };
