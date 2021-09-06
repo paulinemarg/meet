@@ -3,6 +3,7 @@ import { shallow, mount } from 'enzyme';
 import App from '../App';
 import EventList from '../EventList';
 import CitySearch from '../CitySearch';
+import NumberOfEvents from '../NumberOfEvents';
 import { mockData } from '../mock-data';
 import { extractLocations, getEvents } from '../api';
 
@@ -19,6 +20,9 @@ describe('<App /> component', () => {
 
   test('render CitySearch', () => {
     expect(AppWrapper.find(CitySearch)).toHaveLength(1);
+  });
+  test('renders NumberOfEvents', () => {
+    expect(AppWrapper.find(NumberOfEvents)).toHaveLength(1);
   });
 });
 
@@ -60,4 +64,45 @@ describe('<App /> integration', () => {
     expect(AppWrapper.state('events')).toEqual(allEvents);
     AppWrapper.unmount();
   });
+  test("App passes 'numberOfEvents' state as a prop to 'NumberOfEvents' component", () => {
+    const AppWrapper = mount(<App />);
+    const AppNumberOfEventsState = AppWrapper.state('numberOfEvents');
+    expect(AppNumberOfEventsState).not.toEqual(undefined);
+    expect(AppWrapper.find(NumberOfEvents).props().numberOfEvents).toEqual(
+      AppNumberOfEventsState
+    );
+    AppWrapper.unmount();
+  });
+  test('App should render a number of 32 events by default', () => {
+    const AppWrapper = mount(<App />);
+    const numberOfEventsItems = AppWrapper.find(NumberOfEvents).find(
+      '.event-number-input'
+    );
+    expect(numberOfEventsItems.props().value).toEqual(32);
+    AppWrapper.unmount();
+  });
+  test("App should change number of events when 'NumberOfEvents' component changes from 32 to 16", async () => {
+    const AppWrapper = mount(<App />);
+    const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+    const locations = extractLocations(mockData);
+    NumberOfEventsWrapper.setState({ events: locations, eventCount: 16 });
+    NumberOfEventsWrapper.find('.event-number-input').simulate('change');
+    expect(NumberOfEventsWrapper.state('eventCount')).toEqual(16);
+    AppWrapper.unmount();
+  });
+  //
+  test("Change in the number of events should be led to changes on the EventList component.", async () => {
+
+    const AppWrapper = mount(<App />);
+    const locations = extractLocations(mockData);
+    AppWrapper.setState({ numberOfEvents: "32", locations: "all" });
+    const eventObject = { target: { value: 1 } };
+    const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+    await NumberOfEventsWrapper.find(".event-number-input").simulate(
+      "change",
+      eventObject
+    );
+    AppWrapper.unmount();
+  });
+
 });
