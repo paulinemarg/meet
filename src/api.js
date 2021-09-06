@@ -44,7 +44,7 @@ export const getEvents = async () => {
   const token = await getAccessToken();
 
   if (token) {
-    removeQuery();
+    removeQuery(); // eslint-disable-next-line
     const url = 'https://4v4gfj7cpj.execute-api.eu-central-1.amazonaws.com/dev/api/get-events' + '/' + token;
     const result = await axios.get(url);
     if (result.data) {
@@ -73,7 +73,7 @@ const removeQuery = () => {
 
 export const getToken = async (code) => {
   const encodeCode = encodeURIComponent(code);
-  const { access_token } = await fetch(
+  const { access_token } = await fetch( // eslint-disable-next-line
     'https://4v4gfj7cpj.execute-api.eu-central-1.amazonaws.com/dev/api/token' + '/' + encodeCode
   )
     .then((res) => {
