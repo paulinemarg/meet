@@ -46,14 +46,25 @@ class App extends Component {
     });
   }
 
+  scrollTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
   render() {
     return (
-      <div className="App">
-        <h1>Let's Meet-App</h1>
-        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
-        <EventList className="eventlist" events={this.state.events} />
-      </div>
+      <>
+        <div className="App">
+          <img src="https://img.icons8.com/wired/64/000000/worldwide-location.png" alt="World logo" />
+          <h1>Let's Meet-App</h1>
+          <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+          <EventList className="eventlist" events={this.state.events} />
+          <button className="scrollup-btn" onClick={this.scrollTop}>&#8593;</button>
+          <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
+        </div>
+      </>
     );
   }
 }
