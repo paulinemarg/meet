@@ -29,7 +29,7 @@ class Event extends Component {
           )}
         </div>
         <button className="details-btn" onClick={this.toggleExpanded}>
-          {!this.state.expanded ? 'Show Details' : 'Hide Details'}
+          {!this.state.expanded ? 'Read More' : 'Close'}
         </button>
       </div>
     );
