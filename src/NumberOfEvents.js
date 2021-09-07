@@ -24,11 +24,10 @@ class NumberOfEvents extends Component {
     const { numberOfEvents } = this.state;
     return (
       <div className="numberOfEvents">
-        <label>Number of Events: </label>
         <input
-          className="event-number-input"
+          className="eventnumber"
           type="number"
-          placeholder="Enter Number of Events"
+          placeholder="0"
           id="numberOfEvents__input"
           value={numberOfEvents}
           onChange={this.handleInputChanged}
