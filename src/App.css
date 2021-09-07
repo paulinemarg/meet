@@ -1,7 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+@import url(https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap);
 .App {
   text-align: center;
   padding: 2% 5%;
+  font-family: 'Bree Serif', serif;
 }
 
 .App * {
@@ -29,11 +30,15 @@ input[type="number"] {
   padding: 8px 6px 8px 10px;
   border-radius: 4px;
   outline: none;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(31, 49, 49);
   font-size: 14px;
   line-height: 20px;
   align-self: center;
   height: 38px;
+}
+
+input[type="number"] {
+  width: 50px;
 }
 
 .city {
@@ -41,6 +46,7 @@ input[type="number"] {
 }
 
 .CitySearch {
+  font-family: 'Bree Serif', serif;
   display: flex;
   flex-direction: column;
   flex-basis: 300px;
@@ -50,6 +56,7 @@ input[type="number"] {
 }
 
 .suggestions {
+  font-family: 'Bree Serif', serif;
   width: 250px;
   position: absolute;
   z-index: 2;
@@ -60,10 +67,16 @@ input[type="number"] {
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
 
+h1 {
+  color: rgb(31, 49, 49);
+}
+
 .suggestions > li {
+  font-family: 'Bree Serif', serif;
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: #eee;
+  background-color: rgb(31, 49, 49);
+  color: honeydew;
   cursor: default;
 }
 
@@ -73,19 +86,30 @@ input[type="number"] {
 }
 
 .suggestions > li:hover {
-  background-color: #bcdcdb;
+  background-color: rgb(15, 136, 136);
+  color: honeydew;
+}
+
+.EventList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2rem;
 }
 
 .event {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
-  border: 1px solid #ccc;
+  border: 3px solid black;
   border-radius: 4px;
+  display: grid;
   position: relative;
 }
 
 .details-btn {
+  font-family: 'Bree Serif', serif;
+  background-color: rgb(31, 49, 49);
+  color: lightcyan;
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -93,6 +117,29 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+}
+
+.details-btn:hover {
+  background-color: rgb(15, 136, 136);
+}
+
+.scrollup-btn {
+  font-family: 'Bree Serif', serif;
+  position: fixed;
+  bottom: 65px;
+  right: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  background-color: rgb(31, 49, 49);
+  color: lightcyan;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+}
+
+.scrollup-btn:hover {
+  background-color: rgb(15, 136, 136);
 }
 
 .name {
@@ -114,10 +161,13 @@ input[type="number"] {
   overflow-x: hidden;
 }
 
-.numberOfEvents {
-  width: 200px;
-  margin: 20px auto;
-  text-align: center;
+.eventnumber {
+  font-family: 'Bree Serif', serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 .button-wrapper {
