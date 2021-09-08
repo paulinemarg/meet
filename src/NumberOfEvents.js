@@ -25,7 +25,7 @@ class NumberOfEvents extends Component {
     return (
       <div className="numberOfEvents">
         <input
-          className="eventnumber"
+          className="event-number-input"
           type="number"
           placeholder="0"
           id="numberOfEvents__input"
