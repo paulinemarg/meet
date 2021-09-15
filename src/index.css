@@ -3,8 +3,8 @@ body {
   font-family: 'Archivo Narrow', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: lightcyan;
-  color: rgb(31, 49, 49);
+  background-image: url("../src/img/background.jpg"); /* Photo by Clement Helardot from Unsplash */
+  background-size: cover;
 }
 
 code {
