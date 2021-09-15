@@ -30,7 +30,7 @@ input[type="number"] {
   padding: 8px 6px 8px 10px;
   border-radius: 4px;
   outline: none;
-  border: 1px solid rgb(31, 49, 49);
+  border: 1px solid black;
   font-size: 14px;
   line-height: 20px;
   align-self: center;
@@ -68,15 +68,15 @@ input[type="number"] {
 }
 
 h1 {
-  color: rgb(31, 49, 49);
+  color: rgb(202, 96, 96);
 }
 
 .suggestions > li {
   font-family: 'Bree Serif', serif;
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: rgb(31, 49, 49);
-  color: honeydew;
+  background-color: rgb(202, 96, 96);
+  color: lightgrey;
   cursor: default;
 }
 
@@ -86,14 +86,15 @@ h1 {
 }
 
 .suggestions > li:hover {
-  background-color: rgb(15, 136, 136);
-  color: honeydew;
+  background-color: #d7a42e;
+  color: lightgrey;
 }
 
 .EventList {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
+  color: rgb(202, 96, 96);
 }
 
 @media screen and (max-width:767px) {
@@ -110,12 +111,13 @@ h1 {
   border-radius: 4px;
   display: grid;
   position: relative;
+  background-color: lightgrey;
 }
 
 .details-btn {
   font-family: 'Bree Serif', serif;
-  background-color: rgb(31, 49, 49);
-  color: lightcyan;
+  background-color: rgb(202, 96, 96);
+  color: lightgrey;
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -126,7 +128,7 @@ h1 {
 }
 
 .details-btn:hover {
-  background-color: rgb(15, 136, 136);
+  background-color: #d7a42e;
 }
 
 .scrollup-btn {
@@ -137,15 +139,15 @@ h1 {
   border: none;
   border-radius: 5px;
   font-size: 1.125rem;
-  background-color: rgb(31, 49, 49);
-  color: lightcyan;
+  background-color: rgb(202, 96, 96);
+  color: lightgrey;
   cursor: pointer;
   height: 35px;
   width: 35px;
 }
 
 .scrollup-btn:hover {
-  background-color: rgb(15, 136, 136);
+  background-color: #d7a42e;
 }
 
 .name {
