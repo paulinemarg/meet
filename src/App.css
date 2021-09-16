@@ -68,7 +68,11 @@ input[type="number"] {
 }
 
 h1 {
+  font-family: 'Bree Serif', serif;
   color: rgb(202, 96, 96);
+  font-size: 40px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 .suggestions > li {
