@@ -57,7 +57,6 @@ class App extends Component {
     return (
       <>
         <div className="App">
-          <img src="https://img.icons8.com/wired/64/000000/worldwide-location.png" alt="World logo" />
           <h1>Let's Meet-App</h1>
           <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
           <EventList className="eventlist" events={this.state.events} />
