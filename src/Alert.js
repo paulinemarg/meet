@@ -29,9 +29,7 @@ class InfoAlert extends Alert {
   getStyle = () => {
     return {
       color: this.color,
-      background: 'black',
-      margin: '0px',
-      padding: '0px 10px',
+      backgroundColor: 'white',
     };
   }
 }
@@ -39,14 +37,12 @@ class InfoAlert extends Alert {
 class ErrorAlert extends Alert {
   constructor(props) {
     super(props);
-    this.color = 'red';
+    this.color = 'black';
   }
   getStyle = () => {
     return {
       color: this.color,
-      background: 'black',
-      margin: '0px',
-      padding: '0px 10px',
+      backgroundColor: 'red',
     };
   }
 }
@@ -60,8 +56,6 @@ class WarningAlert extends Alert {
     return {
       color: this.color,
       background: 'black',
-      margin: '0px',
-      padding: '0px 10px',
     };
   }
 }
