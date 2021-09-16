@@ -5,6 +5,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url("../src/img/background.jpg"); /* Photo by Clement Helardot from Unsplash */
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: lightgray;
 }
 
 code {
