@@ -7,7 +7,7 @@
   padding-top: 15%;
   text-align: center;
   box-sizing: border-box;
-  background-image: url("../src/img/welcome.jpg");
+  background-image: url("../src/img/welcome.jpg"); /* Photo by Marvin Meyer from Unsplash */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
