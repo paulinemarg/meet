@@ -4,6 +4,7 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents, extractLocations } from './api';
+import { WarningAlert } from './Alert';
 import './nprogress.css';
 
 class App extends Component {
@@ -11,7 +12,8 @@ class App extends Component {
     events: [],
     locations: [],
     currentLocation: 'all',
-    numberOfEvents: 32
+    numberOfEvents: 32,
+    warningText: ""
   }
 
   componentDidMount() {
@@ -23,6 +25,17 @@ class App extends Component {
           locations: extractLocations(events)
         });
       }
+      if (navigator.onLine) {
+        console.log('online');
+        this.setState({
+          warningText: "",
+        });
+      } else {
+        console.log('offline');
+        this.setState({
+          warningText: "You are currently using the app offline."
+        });
+      };
     });
   }
 
@@ -58,6 +71,7 @@ class App extends Component {
       <>
         <div className="App">
           <h1>Let's Meet-App</h1>
+          <WarningAlert text={this.state.warningText} />
           <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
           <EventList className="eventlist" events={this.state.events} />
           <button className="scrollup-btn" onClick={this.scrollTop}>&#8593;</button>
