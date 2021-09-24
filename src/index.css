@@ -3,6 +3,12 @@ body {
   font-family: 'Archivo Narrow', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("../src/img/background.jpg"); /* <a href="https://www.freepik.com/photos/background">Background photo created by jannoon028 - www.freepik.com</a> */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: lightgray;
 }
 
 code {
