@@ -1,20 +1,43 @@
-<h1 align="center">Meet App Documentation</h1>
+# Meet-App
 
-# Objective
+![Meet](/meet.jpg)
 
-To build a serverless, progressive web application (PWA) with **React** using a **test-driven** **development** **(TDD)** technique. The application uses the Google Calendar API to fetch upcoming events.
+## Description
 
-# Features & Requirements
+Meet App is a serverless, progressive web application that uses the [Google Calendar API](https://developers.google.com/calendar) to fetch upcoming events. The app is built with React using a test-driven development (TDD) approach. The serverless function is hosted by AWS.
 
-## Key Features:
-* Filter events by city.
-* Show/hide event details.
-* Specify number of events.
-* Use the app when offline.
-* Add an app shortcut to the home screen.
-* View a chart showing the number of upcoming events by city.
+The app alows user to search for a city and get a list of events hosted in that city. The user can view charts that display how many events will take place in that city on upcoming days as well as view the popularity of event genres in the form of a pie chart.
 
-## User Stories & Test Scenarios:
+## Quick Start 🚀
+
+The app can be viewed [here](https://paulinemarg.github.io/meet-app/).
+To run it locally yourself, clone the repository, and complete the following steps:
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start application with npm and run in browser
+
+_By default the app will run a local server on port: 3000_
+
+```bash
+npm run start
+```
+
+### Running application tests
+
+```bash
+npm run test
+```
+
+---
+
+## Features
+
+Described in terms of user stories and scenarios
 
 ### FEATURE 1: FILTER EVENTS BY CITY
 - As a user, I should be able to filter events by city so that I can see the list of events that take place in that city.
@@ -74,25 +97,3 @@ To build a serverless, progressive web application (PWA) with **React** using a 
 >**Given** a user would like a visual representation of events
 >**When** a user clicks on chart
 >**Then** the chart will show the number of upcoming events in each city.
-
-# Technical Requirements
-
-The app:
-* must be a React application.
-* must be built using the TDD technique.
-* must use the Google Calendar API and OAuth2 authentication flow.
-* must use serverless functions (AWS lambda is preferred) for the authorization server instead of using a traditional server.
-* must work on the latest versions of Chrome, Firefox, Safari, Edge, and Opera, as well as on IE11.
-* must display well on all screen sizes (including mobile and tablet) widths of 1920px
-and 320px.
-* must pass Lighthouse’s PWA checklist.
-* must work offline or in slow network conditions with the help of a service worker.
-* must be deployed on GitHub Pages.
-* must implement an alert system using an OOP approach to show information to the user.
-* must make use of data visualization (recharts preferred).
-* must be covered by tests with a coverage rate >= 90%.
-* must be monitored using an online monitoring tool.  
-
-* The app’s code must be hosted in a Git repository on GitHub.
-* Users may be able to install the app on desktop and add the app to their home screen on mobile.
-* The API call must use React axios and async/await.
