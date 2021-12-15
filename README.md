@@ -1,5 +1,7 @@
 # Meet-App
 
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/paulinemarg/meet-app"> <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/paulinemarg/meet-app?color=green"> <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/paulinemarg/meet-app?color=yellow"> <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/paulinemarg/meet-app?style=plastic">
+
 ![Meet](/meet.jpg)
 
 ## Description
@@ -7,6 +9,19 @@
 Meet App is a serverless, progressive web application that uses the [Google Calendar API](https://developers.google.com/calendar) to fetch upcoming events. The app is built with React using a test-driven development (TDD) approach. The serverless function is hosted by AWS.
 
 The app alows user to search for a city and get a list of events hosted in that city. The user can view charts that display how many events will take place in that city on upcoming days as well as view the popularity of event genres in the form of a pie chart.
+
+## Tests
+* Unit Testing 
+* Integration testing 
+* End-to-End Testing
+
+## Technologies
+* Javascript
+* React
+* HTML
+* CSS
+* SCSS
+* Gherkin
 
 ## Quick Start 🚀
 
