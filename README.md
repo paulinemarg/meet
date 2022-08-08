@@ -25,8 +25,7 @@ The app alows user to search for a city and get a list of events hosted in that 
 
 ## Quick Start 🚀
 
-The app can be viewed [here](https://paulinemarg.github.io/meet-app/).
-To run it locally yourself, clone the repository, and complete the following steps:
+To run the app locally, clone the repository, and complete the following steps:
 
 ### Install dependencies
 
