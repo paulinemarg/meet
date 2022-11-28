@@ -95,7 +95,7 @@ Described in terms of user stories and scenarios
 >**Then** the event list will show the user's specified number
 
 ### FEATURE 4: USE THE APP WHEN OFFLINE
-- As a user, I would like to be able to use the app when offline so that I can see the events I viewed the last time I was online.
+- As a user, I am be able to use the app offline so that I can see the events I viewed the last time I was online.
 * Scenario 1: Show cached data when there’s no internet connection.
 >**Given** there's no internet connection
 >**When** the user wants to view the events 
@@ -106,7 +106,7 @@ Described in terms of user stories and scenarios
 >**Then** the app will show error letting user know they are offline
 
 ### FEATURE 5: DATA VISUALIZATION
-- As a user, I would like to be able to see a chart showing the upcoming events in each city so that I know what events are organized in which city.
+- As a user, I would be able to see a chart showing the upcoming events in each city so that I know what events are organized in which city.
 * Scenario 1: Show a chart with the number of upcoming events in each city.
 >**Given** a user would like a visual representation of events
 >**When** a user clicks on chart
