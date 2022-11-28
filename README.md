@@ -69,7 +69,7 @@ Described in terms of user stories and scenarios
 >**Then** their city should be changed to that city (i.e., “Berlin, Germany”) and the user should receive a list of upcoming events in that city
 
 ### FEATURE 2: SHOW/HIDE AN EVENT’S DETAILS
-- As a user, I would like to be able to show/hide event details so that I can see more/less information about an event.
+- As a user, I should be able to show/hide event details so that I can see more/less information about an event.
 * Scenario 1: An event element is collapsed by default.
 >**Given** the main page is open  
 >**When** the user selects an event 
@@ -84,7 +84,7 @@ Described in terms of user stories and scenarios
 >**Then** the event element will collapse to hide its details
 
 ### FEATURE 3: SPECIFY NUMBER OF EVENTS
-- As a user, I would like to be able to specify the number of events I want to view in the app so that I can see more or fewer events in the events list at once.
+- As a user, I should be able to specify the number of events I want to view in the app so that I can see more or fewer events in the events list at once.
 * Scenario 1: When user hasn’t specified a number, 32 is the default number.
 >**Given** the user has not specified the number of events
 >**When** the list of events appear 
@@ -95,7 +95,7 @@ Described in terms of user stories and scenarios
 >**Then** the event list will show the user's specified number
 
 ### FEATURE 4: USE THE APP WHEN OFFLINE
-- As a user, I am be able to use the app offline so that I can see the events I viewed the last time I was online.
+- As a user, I should be able to use the app offline so that I can see the events I viewed the last time I was online.
 * Scenario 1: Show cached data when there’s no internet connection.
 >**Given** there's no internet connection
 >**When** the user wants to view the events 
