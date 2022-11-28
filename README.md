@@ -106,7 +106,7 @@ Described in terms of user stories and scenarios
 >**Then** the app will show error letting user know they are offline
 
 ### FEATURE 5: DATA VISUALIZATION
-- As a user, I would be able to see a chart showing the upcoming events in each city so that I know what events are organized in which city.
+- As a user, I should be able to see a chart showing the upcoming events in each city so that I know what events are organized in which city.
 * Scenario 1: Show a chart with the number of upcoming events in each city.
 >**Given** a user would like a visual representation of events
 >**When** a user clicks on chart
